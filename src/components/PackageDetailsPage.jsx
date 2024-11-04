@@ -20,18 +20,22 @@ const testItem = {
 };
 
 
-function PackageDetailsPage({ packages }) {
+function PackageDetailsPage( { packages } ) {
     const parcel_id = useParams().id;
 
     let item = ( parcel_id === "testitem" ) 
                ? testItem 
                : packages?.find(p => p.parcel_id === parcel_id) || null;
     
-    return item ? (
-      <PackageDetails {...item} />
-    ) : (
-      <p>`Package Details Not Found :(`</p>
-    );
+    if( item )
+    {
+      return ( <PackageDetails {...item} /> );
+    }
+    else
+    {
+      return ( <p>`Package Details Not Found :(`</p> );
+    }
+
 } 
 
 export default PackageDetailsPage;

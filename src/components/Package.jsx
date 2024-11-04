@@ -1,7 +1,5 @@
 import './Package.css';
-
 import { Link } from "react-router-dom";
-
 
 function Package(data) {
 
@@ -10,7 +8,7 @@ function Package(data) {
   // why does this appear twice for every id?
   // console.log("id: "+id+ ", parcel_id: "+parcel_id+", sender: "+sender);
   
-  let url = `/package-tracking/details/${parcel_id}`;
+  const url = `/package-tracking/details/${parcel_id}`;
 
   return (
       <div>

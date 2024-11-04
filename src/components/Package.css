@@ -1,19 +1,23 @@
-.package{
-    border-style: solid;
-    margin-bottom: 5x;
-    background-color:antiquewhite;
-    border-color: lightblue;
-    width: 20%;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    box-shadow: 0 4px 4px 0 rgba(54, 23, 23, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition-duration: 0.2s;
-}
-
-.package:hover{
+.package {
     background-color: rgb(1, 145, 148);
     color: white;
+    width: 200px;
+    height: 200px;
+    padding: 10px 5px;  /* Simplified padding */
+    border-radius: 5px;
+    border: solid transparent;  /* Simplified border */
+    box-shadow: 0 4px 4px 0 rgba(54, 23, 23, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    transition-duration: 0.2s;
+    font-size: calc(5px + 2vmin);
 }
+
+.package:hover {
+    background-color: rgb(51,195,198);
+    border-color: rgba(255,255,255,1);
+    color: white;
+}
+
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; }
+a:hover { color: white }
+a:active { color: gray; }

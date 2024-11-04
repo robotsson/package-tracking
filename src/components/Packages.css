@@ -1,10 +1,26 @@
-.packages{
+/* .packages {
+    margin-bottom: 30px;
+    border-color: red;
     border-style: solid;
-    margin-bottom: 10px;
-    border-color: yellow;
     background-color:aliceblue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: auto;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+} */
+
+.packages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;  /* This replaces margin between items */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;  /* Give some breathing room */
+    background-color: aliceblue;
+    border: solid red;
 }

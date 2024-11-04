@@ -8,7 +8,7 @@ function Package(data) {
   const {id, status, eta, parcel_id, sender} = data;
   
   // why does this appear twice for every id?
-  console.log("id: "+id+ ", parcel_id: "+parcel_id+", sender: "+sender);
+  // console.log("id: "+id+ ", parcel_id: "+parcel_id+", sender: "+sender);
   
   let url = `/package-tracking/details/${parcel_id}`;
 

@@ -1,18 +1,3 @@
-/* .packages {
-    margin-bottom: 30px;
-    border-color: red;
-    border-style: solid;
-    background-color:aliceblue;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: auto;
-    height: max-content;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-} */
-
 .packages {
     display: flex;
     flex-direction: row;

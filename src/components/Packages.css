@@ -7,5 +7,5 @@
     align-items: center;
     padding: 20px;  /* Give some breathing room */
     background-color: aliceblue;
-    border: solid red;
+    border: solid transparent;
 }

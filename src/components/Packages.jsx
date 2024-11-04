@@ -1,24 +1,27 @@
-import React, { useEffect, useState } from 'react';
 import Package from './Package';
 import './Packages.css';
 
+/* creates a list of package items */
 function Packages({ packages }) {
-  return (
+  
+  if( packages )
+  {   
+    return (
     <div>
-      {packages ? (
-        <ul className="packages">
-          { packages.map( ( values, index ) => (
-            <Package
-              key={index}
-              {...values}
-            /> ) )
-          }
-        </ul>
-      ) : (
-        <p>Packages Loading...</p>
-      )}
-    </div>
-  );
+      Hello {packages[0].user_name}!
+      <ul className="packages">
+        { 
+          packages.map( 
+            ( package_item, index ) => ( <Package key={index} {...package_item}/> )
+          ) 
+        }
+      </ul>
+    </div> );
+  }
+  else
+  {
+    return ( <p>Packages Loading...</p> );
+  }
 }
 
 export default Packages;

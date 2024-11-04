@@ -1,0 +1,10 @@
+.packages{
+    border-style: solid;
+    margin-bottom: 10px;
+    border-color: yellow;
+    background-color:aliceblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+}

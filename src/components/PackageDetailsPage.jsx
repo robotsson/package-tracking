@@ -19,7 +19,7 @@ const testItem = {
   "last_updated": "2020-09-05T15:15:15Z"
 };
 
-
+/* finds the item the user clicked on and sends it to PackageDetails */
 function PackageDetailsPage( { packages } ) {
     const parcel_id = useParams().id;
 

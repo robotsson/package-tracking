@@ -36,6 +36,7 @@
     padding-right: 20px;
     font-size: calc(5px + 2vmin);
     transition-duration: 0.2s;
+    color: black;
 }
 
 .package-details-button:hover {
@@ -48,6 +49,14 @@
     font-size: calc(5px + 2vmin);
 }
 
+
+.package-details-button:link {
+    color: black;
+}
+
+.package-details-button:visited {
+    color: black;
+}
 
 a:link { color: grey; text-decoration: none;}
 a:visited { color: black; }

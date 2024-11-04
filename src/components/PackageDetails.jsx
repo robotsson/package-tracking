@@ -1,6 +1,5 @@
 import './PackageDetails.css';
-import { useParams, Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 
 function PackageDetails(data) {
@@ -25,5 +24,6 @@ function PackageDetails(data) {
     )
 
 }
+
 
 export default PackageDetails;

@@ -18,7 +18,7 @@ function PackageDetails(package_item) {
 
     let date = new Date( package_item["eta"] );
     const dateStr = date.getFullYear() +"-"+ _getPadded( date.getMonth() ) +"-"+ _getPadded( date.getDay() ) +" "+
-                    _getPadded( date.getHours() ) +":"+ date.getMinutes();
+                    _getPadded( date.getHours() ) +":"+ _getPadded( date.getMinutes() );
 
     let arrivalStr = "Estimated arrival"; 
     if( package_item["status"] === "delivered" || package_item["status"] === "ready-for-pickup")

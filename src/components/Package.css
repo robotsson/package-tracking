@@ -22,9 +22,10 @@
 .package-view-details
 {
     background-color: rgb(31,175,178);
-    width: 99%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: 98%;
+    height: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     margin-right: 2px;
     border-radius: 5px;
     border: solid transparent;

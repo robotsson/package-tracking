@@ -17,6 +17,14 @@ const fakejsondata = [
    {"id":10,"status":"delivered","eta":"2020-09-28T22:04:39Z","parcel_id":"8020","sender":"Browsezoom","verification_required":true,"location_id":"FR02 6000 1205 209C YEAO PW7S L81","location_name":"Doe Crossing","location_coordinate_latitude":14.5508865,"location_coordinate_longitude":121.0075554,"location_status_ok":true,"user_phone":"p46 729478015","user_name":"Jhon Doe","notes":null,"last_updated":"2020-09-23T22:00:24Z"}
 ];
 
+  // const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   fetch('https://my.api.mockaroo.com/orders.json?key=e49e6840')
+  //     .then(response => response.json())
+  //     .then(data => setData(data))
+  //     .catch(error => console.error(error));
+  // }, []);
 
 /* Main app, fetches/fakes data, and sets up routes to components */
 function App() {
@@ -24,34 +32,34 @@ function App() {
   const [error, setError] = useState(null);
   // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchPackages = async () => {
-      try {
-        //setLoading(true);
-        // Max 200 calls/day with free account
-        // const response = await fetch('https://my.api.mockaroo.com/orders.json?key=cbec7fd0');
-        const response = { "ok": false };
-        if (!response.ok) {
-          console.log(`HTTP error! status: ${response.status}`);
-          // throw new Error(`HTTP error! status: ${response.status}`);
-        }
+  const fetchPackages = async () => {
+    try {
+      //setLoading(true);
+      // Max 200 calls/day with free account
+      // const response = await fetch('https://my.api.mockaroo.com/orders.json?key=cbec7fd0');
+      //const response = await fetch('http://127.0.0.1:4000/template/');
+      const response = { "ok": false };
+      if (!response.ok) {
+        console.log(`HTTP error! status: ${response.status}`);
+        // throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-        // if you can't make it, fake it..
-        const data = response.ok ? await response.json()
-                                 : fakejsondata;
+      // if you can't make it, fake it..
+      const data = response.ok ? await response.json()
+                               : fakejsondata;
 
-        setPackages(data);
-      } catch (error) {
-        setError(error.message);
-        console.error('Error fetching packages:', error);
-      } 
-      //finally {
-      //  setLoading(false);
-      //}
-    };
- 
-    fetchPackages();
-  }, []);
+      setPackages(data);
+    } catch (error) {
+      setError(error.message);
+      console.error('Error fetching packages:', error);
+    } 
+    //finally {
+    //  setLoading(false);
+    //}
+  };
+
+
+  useEffect( () => { fetchPackages(); }, []);
  
   if (error) {
     return <div>Error loading packages: {error}</div>;

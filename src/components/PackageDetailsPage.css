@@ -1,0 +1,9 @@
+.package-details-page 
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(31,175,178);
+    width: 100vw;
+    justify-content: center;
+
+}

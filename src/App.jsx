@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
-
 /* Main app, fetches data, and sets up routes to components */
 function App() {
 
@@ -14,7 +13,6 @@ function App() {
   const fetch_url = 'https://raw.githubusercontent.com/robotsson/package-tracking/refs/heads/main/src/orders.json';
   
   useEffect(() => {
-    // If you're using Create React App and the file is in the public folder
     fetch( fetch_url )
       .then(response => {
         if (!response.ok) {

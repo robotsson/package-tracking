@@ -1,3 +1,4 @@
+import './PackageDetailsPage.css';
 import PackageDetails from './PackageDetails';
 import { useParams } from 'react-router-dom';
 
@@ -29,7 +30,13 @@ function PackageDetailsPage( { packages } ) {
     
     if( item )
     {
-      return ( <PackageDetails {...item} /> );
+      return ( <div>
+                 Hello { item["user_name"] }!<p></p>
+                 <div className="package-details-page">
+                   <PackageDetails {...item} /> 
+                 </div>
+               </div>
+             );
     }
     else
     {

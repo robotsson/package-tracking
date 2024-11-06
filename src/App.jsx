@@ -11,9 +11,11 @@ function App() {
 
   const [data, setData] = useState(null);
 
+  const fetch_url = 'https://raw.githubusercontent.com/robotsson/package-tracking/refs/heads/main/src/orders.json';
+  
   useEffect(() => {
     // If you're using Create React App and the file is in the public folder
-    fetch('https://raw.githubusercontent.com/robotsson/package-tracking/refs/heads/main/src/orders.json')
+    fetch( fetch_url )
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

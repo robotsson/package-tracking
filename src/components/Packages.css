@@ -5,7 +5,8 @@
     gap: 20px;  /* This replaces margin between items */
     justify-content: center;
     align-items: center;
-    padding: 20px;  /* Give some breathing room */
-    background-color: rgb(31,175,178);
+    padding-top: 20px;  /* Give some breathing room */
+    background-color: rgb(31,175,178); 
     border: solid transparent;
+    margin-bottom: 0px;
 }

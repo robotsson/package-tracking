@@ -24,13 +24,16 @@ function Packages({ packages }) {
     return (
     <div>
       Hello {packages[0].user_name}!
-      <ul className="packages">
+      <div className="packages">
+        <ul className="packages">
         { 
           packages.map( 
             ( package_item, index ) => ( <Package key={index} {...package_item}/> )
           ) 
         }
-      </ul>
+        </ul>
+        <p></p>
+      </div>
     </div> );
   }
   else

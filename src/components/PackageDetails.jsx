@@ -7,6 +7,7 @@ function _capitalizeFirstLetter(val) {
 
 function _getPadded( nbr )
 {
+  console.log(nbr);
   return (""+nbr).padStart(2, "0");
 }
 
@@ -16,9 +17,17 @@ function PackageDetails(package_item) {
     // console.log( package_item["user_name"]);
     let statusText = _capitalizeFirstLetter( package_item["status"].replaceAll("-", " ",) );
 
+    console.log(package_item["eta"]);
+
     let date = new Date( package_item["eta"] );
-    const dateStr = date.getFullYear() +"-"+ _getPadded( date.getMonth() ) +"-"+ _getPadded( date.getDay() ) +" "+
+
+    console.log(date);
+
+    const dateStr = date.getFullYear() +"-"+ _getPadded( date.getMonth()+1 ) +"-"+ _getPadded( date.getDate() ) +" "+
                     _getPadded( date.getHours() ) +":"+ _getPadded( date.getMinutes() );
+
+    console.log(date.getMonth);
+    console.log(date.getDay);
 
     let arrivalStr = "Estimated arrival"; 
     if( package_item["status"] === "delivered" || package_item["status"] === "ready-for-pickup")
